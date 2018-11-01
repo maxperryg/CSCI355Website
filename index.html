@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>CS 355 Home Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script type ="text/javascript" src="MainJavascrippt.js"></script>
+</head>
+<body>
+
+    <div class="intro">
+        <h1>This is my Website for CS&nbsp;355</h1>
+        <h2>Welcome, My name is Maxwell Grossman</h2>
+    </div>
+
+    <div class=topnavcontainer>
+            <div class="toggle"  id="burger">
+                <a href="javascript:void(0);" onclick="openMenu()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <ul class="topnav" id="topnavid">
+                <li class="active" ><a href="index.html">Home</a></li>
+                <li><a href="BrowserInfo.html">Browser Information</a></li>
+                <li class="dropDown">
+                    <a href="javascript:void(0);" class="dropButton">Assignments</a>
+                    <div class = dropDownContent>
+                        <a href="AssignmentTwo.html">Assignment Two</a>
+                        <a href="#">Assignment Three</a>
+                        <a href="#">Assignment Four</a>
+                    </div>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+body{
+    background-color:aliceblue;
+    width: 100%;
+    margin: 0px;
+}
+.intro{
+    text-align: center;
+}
+.topnavcontainer{
+
+}
+.toggle{
+    width: inherit;
+    padding: 10px 20px;
+    background-color:cadetblue;
+    text-align:left;
+    font-size: 30px;
+    display: none;
+}
+.toggle i{
+    color: white;
+}
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+.topnav li {
+    float: left;
+}
+.topnav li a {
+    display:block;
+    color: #dddddd;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.active {
+    background-color:burlywood;
+    color: white;
+}
+.dropButton{
+
+}
+.dropDownContent {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropDownContent a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropDownContent a:hover {
+    background-color: burlywood;
+}
+.dropDown:hover .dropDownContent {
+    display: inline-block;
+}
+@media screen and (max-width:600px) {
+    .topnav li {
+        float: none;
+        display: none;
+    }
+    .toggle{
+        display: block;
+        border: 1px solid black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    }
+    .topnav.responsive li{
+        display: block;
+    }
+    .topnav.responsive{
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropDownContent{
+        min-width: 100%;
+    }
+
+}
+.mainContent div{
+
+}
+.screenInfo {
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+.screenInfo .info{
+    float:none;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: cadetblue;
+    border-bottom: 1px solid black;
+    padding: 10px;
+
+}
+.screenInfo .property{
+    text-decoration: underline;
+}
+.browserInfo {
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+.browserInfo .info{
+    float:none;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: cadetblue;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.browserInfo .property{
+    text-decoration: underline;
+}
+.windowInfo {
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+.windowInfo .info{
+    float:none;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: cadetblue;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.windowInfo .property{
+    text-decoration: underline;
+}
+table{
+    border: 1px solid black;
+}
+table th{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+table td{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}

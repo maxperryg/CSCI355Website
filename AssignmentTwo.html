@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Assignment Two</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="MainJavascrippt.js"></script>
+        <script src="AssignmentTwo.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body onload="setFileUploadAmount()">
+    <div class="intro">
+            <h1>This is my Website for CS&nbsp;355</h1>
+            <h2>Welcome, My name is Maxwell Grossman</h2>
+        </div>
+
+    <div class=topnavcontainer>
+            <div class="toggle"  id="burger">
+                <a href="javascript:void(0);" onclick="openMenu()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <ul class="topnav" id="topnavid">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BrowserInfo.html">Browser Information</a></li>
+                <li class="dropDown">
+                    <a href="javascript:void(0);" class="dropButton">Assignments</a>
+                    <div class = dropDownContent>
+                        <a class="active" href="AssignmentTwo.html">Assignment Two</a>
+                        <a href="#">Assignment Three</a>
+                        <a href="#">Assignment Four</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    <div>
+        <h1>IP Address Thing</h1>
+        <p>upload a file with URL's</p>
+
+        <input type="file" id="myFile" onchange="openTextFile(event)">
+    </div>
+        <div class="ipStuff" id="ipStuff">
+            <p>Check it out</p>
+        </div>
+</body>
