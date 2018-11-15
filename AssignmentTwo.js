@@ -14,8 +14,30 @@ var openTextFile = function(event){
 function ipAddressing(text){
     var ips = [];
     var urls = [];
+    var data = {'https': 0, 'http': 0, 'ftp': 0, 'other': 0};
     for(var i = 0; i < text.length; i++){
-        urls[i] = new URL(text[i]);
+        //try{
+            urls[i] = new URL(text[i]);
+            switch (urls[i].protocol) {
+            case ('ftp:'):
+                data['ftp']++;
+                break;
+            case ('http:'):
+                data['http']++;
+                break;
+            case ('https:'):
+                data['https']++;
+                break;
+            default:
+                data['other']++
+        }
+        //}
+        /*catch(err){
+            alert(text[i] +" coultn't be turned into a URL object");
+            urls[i] = new URL();
+            continue;
+        }*/
+
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
@@ -43,6 +65,7 @@ function ipAddressing(text){
         xhr.open("GET", "https://dns.google.com/resolve?name=" + urls[i].host);
         xhr.send();
     }
+
 
     document.getElementById("ipStuff").innerHTML= "<table class=\"ipTable\" id=\"ipTable\"><tr class=\"ipTHeader\"><th>URL</th><th>Scheme</th><th>Authority</th><th>User Info</th><th>Host</th><th>Port</th><th>Path</th><th>Query</th><th>Fragment</th><th>IP Address</th></tr></table>";
 
@@ -73,5 +96,27 @@ function ipAddressing(text){
 
 
     }
+    let total = data.http + data.https + data.ftp + data.other,
+        chart = new CanvasJS.Chart("chartArea", {
+            backgroundColor:"aliceblue",
+            animationEnabled: true,
+            animationDuration: 2000,
+            title: {
+                text: "Protocol Chart"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: (data.http / total) * 100, label: "HTTP"},
+                    {y: (data.https / total) * 100, label: "HTTPS"},
+                    {y: (data.ftp / total) * 100, label: "FTP"},
+                    {y: (data.other / total) * 100, label: "Other"}
+                ]
+            }]
+        });
+    chart.render();
 
 }
