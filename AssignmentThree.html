@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>IP Address Maker</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="MainJavascrippt.js"></script>
+        <script src="AssignmentThree.js"></script>
+
+</head>
+<body>
+        <div class="intro">
+            <h1>This is my Website for CS&nbsp;355</h1>
+            <h2>Welcome, My name is Maxwell Grossman</h2>
+        </div>
+
+        <div class=topnavcontainer>
+            <div class="toggle"  id="burger">
+                <a href="javascript:void(0);" onclick="openMenu()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <ul class="topnav" id="topnavid">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BrowserInfo.html">Browser Information</a></li>
+                <li class="dropDown">
+                    <a href="javascript:void(0);" class="dropButton">Assignments</a>
+                    <div class = dropDownContent>
+                        <a href="AssignmentTwo.html">Assignment Two</a>
+                        <a class="active" href="AssignmentThree.html">Assignment Three</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="setType" id="setType">
+            <h2>Choose a type</h2>
+            <ul class="ipmenu">
+                <li class="ip4" onclick="showIPv4Menu()"> IPv4 </li>
+                <li class="ip6" onclick="showIPv6Menu()">IPv6 </li>
+            </ul>
+            <ul id="ip4Menu" class="ip4Menu">
+                <li onclick="showClassMenu(0)">
+                    Classless
+                </li>
+                <li class="classOption" onclick="showClassMenu(1)"> Classful </li>
+            </ul>
+            <ul id="classMenu" class="classMenu">
+                <li onclick='showAmount("A")' >A</li>
+                <li onclick='showAmount("B")' >B</li>
+                <li onclick='showAmount("C")' >C</li>
+                <li onclick='showAmount("D")' >D</li>
+                <li onclick='showAmount("E")' >E</li>
+            </ul>
+            <ul id="ip6Menu" class="ip6Menu">
+                <li onclick='showAmount("Zero")' >Zero-Compression</li>
+                <li onclick='showAmount("!Zero")' >Without Zero-Compression</li>
+            </ul>
+
+    </div>
+
+
+    <h1 id="versionOutput" class="versionOutput"></h1>
+    <h1 id="isClassful" class="isClassful"></h1>
+    <h1 id="zeroCompression" class="zeroCompression"></h1>
+    <div class="setAmount" id="setAmount">
+        <h2>Choose amount of IP addresses you want</h2>
+            <input type="number" id="amount" min="1">
+            <input type="submit" value="Submit" onclick="setAmount()">
+    </div>
+    <div id="output">
+        <table id="outputTable">
+
+        </table>
+    </div>
+</body>
+</html>

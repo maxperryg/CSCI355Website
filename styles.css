@@ -37,7 +37,7 @@ body{
     padding: 14px 16px;
     text-decoration: none;
 }
-li:hover{
+.topnav li:hover{
     cursor:pointer;
     text-decoration: underline;
 }
@@ -154,4 +154,73 @@ table th{
 table td{
     border-bottom: 1px solid black;
     border-left: 1px solid black;
+}
+.ipmenu{
+    display: inline;
+}
+.ipmenu li{
+    list-style-type: none;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.ipmenu li:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
+.ip4Menu{
+    display: none;
+}
+.ip4Menuvisible{
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+}
+.ip4Menuvisible li{
+    list-style-type: none;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.ip4Menuvisible li:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
+.classMenu{
+    display: none;
+}
+.classMenuvisible{
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+}
+.classMenuvisible li{
+    list-style-type: none;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.classMenuvisible li:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
+.ip6Menu{
+    display: none;
+}
+.ip6Menuvisible{
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+}
+.ip6Menuvisible li{
+    list-style-type: none;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.ip6Menuvisible li:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
+.setAmount{
+    display: none;
+}
+.setAmountvisible{
+    display: inline;
 }
